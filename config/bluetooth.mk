@@ -24,8 +24,6 @@ else
 endif
 
 ifeq ($(BOARD_HAVE_BLUETOOTH),true)
-#BOARD_HAVE_BLUETOOTH_BCM := true
-
 BT += Bluetooth
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BCM), true)
@@ -36,6 +34,8 @@ endif
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BCM), true)
     PRODUCT_PROPERTY_OVERRIDES += ro.bt.service=service
+    PRODUCT_PROPERTY_OVERRIDES += ro.bt.baddr_path=/odm/local_bt_address.txt
+    PRODUCT_PROPERTY_OVERRIDES += persist.service.bdaddr=00:1A:7D:DA:71:13
 else
     PRODUCT_PROPERTY_OVERRIDES += ro.bt.service=service.btlinux
 endif
@@ -67,7 +67,9 @@ BT += \
 
 PRODUCT_COPY_FILES += \
     hardware/amlogic/bluetooth/broadcom/vendor/data/auto_pairing.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pairing.conf \
-    hardware/amlogic/bluetooth/broadcom/vendor/data/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf
+    hardware/amlogic/bluetooth/broadcom/vendor/data/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf \
+    device/hardkernel/common/bluetooth/local_bt_address.txt:/odm/local_bt_address.txt
+
 endif
 
 PRODUCT_COPY_FILES += \
