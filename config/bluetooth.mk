@@ -34,7 +34,7 @@ endif
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BCM), true)
     PRODUCT_PROPERTY_OVERRIDES += ro.bt.service=service
-    PRODUCT_PROPERTY_OVERRIDES += ro.bt.baddr_path=/odm/local_bt_address.txt
+    PRODUCT_PROPERTY_OVERRIDES += ro.bt.bdaddr_path=/odm/local_bt_address.txt
     PRODUCT_PROPERTY_OVERRIDES += persist.service.bdaddr=00:1A:7D:DA:71:13
 else
     PRODUCT_PROPERTY_OVERRIDES += ro.bt.service=service.btlinux
