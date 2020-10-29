@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-$(warning BOARD_HAVE_BLUETOOTH is $(BOARD_HAVE_BLUETOOTH))
-$(warning BLUETOOTH_MODULE is $(BLUETOOTH_MODULE))
-
 ifeq ($(BOARD_HAVE_BLUETOOTH),true)
     PRODUCT_PROPERTY_OVERRIDES += config.disable_bluetooth=false
 else
@@ -83,8 +80,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/common/bluetoot
 
 $(call inherit-product, device/hardkernel/common/bluetooth_modules.mk )
 else
-ifneq ($(wildcard device/hardkernel/$(TARGET_PRODUCT)/bluetooth),)
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/$(TARGET_PRODUCT)/bluetooth
+ifneq ($(wildcard device/hardkernel/$(TARGET_BOOTLOADER_BOARD_NAME)/bluetooth),)
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/$(TARGET_BOOTLOADER_BOARD_NAME)/bluetooth
 endif
 endif
 

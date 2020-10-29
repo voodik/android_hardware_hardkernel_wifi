@@ -26,7 +26,7 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_nl80211
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_nl80211
 
-BOARD_WLAN_DEVICE := rtl8812au
+BOARD_WLAN_DEVICE := rtl
 LIB_WIFI_HAL := libwifi-hal-rtl
 
 WIFI_FIRMWARE_LOADER      := ""
@@ -53,4 +53,6 @@ PRODUCT_COPY_FILES += \
 	device/hardkernel/common/wifi/8192cu:vendor/etc/modprobe.d/8192cu \
 	device/hardkernel/common/wifi/8812au:vendor/etc/modprobe.d/8812au \
 	device/hardkernel/common/wifi/8821cu:vendor/etc/modprobe.d/8821cu \
+	device/hardkernel/common/wifi/8812bu:vendor/etc/modprobe.d/8812bu \
+	device/hardkernel/common/wifi/8188eu:vendor/etc/modprobe.d/8188eu \
 	device/hardkernel/common/wifi/rt2800usb:vendor/etc/modprobe.d/rt2800usb
