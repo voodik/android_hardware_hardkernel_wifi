@@ -81,7 +81,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/common/bluetoot
 $(call inherit-product, device/hardkernel/common/bluetooth_modules.mk )
 else
 ifneq ($(wildcard device/hardkernel/$(TARGET_BOOTLOADER_BOARD_NAME)/bluetooth),)
+ifeq ($(BOARD_VOODIK_ATV), true)
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/$(TARGET_BOOTLOADER_BOARD_NAME)/bluetooth_tv
+else
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/$(TARGET_BOOTLOADER_BOARD_NAME)/bluetooth
+endif
 endif
 endif
 
