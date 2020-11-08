@@ -49,6 +49,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/hardkernel/common/wifi/rt2870.bin:root/lib/firmware/rt2870.bin \
 	device/hardkernel/common/wifi/rtl8192cufw_TMSC.bin:root/lib/firmware/rtlwifi/rtl8192cufw_TMSC.bin \
+	device/hardkernel/common/wifi/rtl8821a_config.bin:root/lib/firmware/rtl_bt/rtl8821a_config.bin \
+	device/hardkernel/common/wifi/rtl8821a_fw.bin:root/lib/firmware/rtl_bt/rtl8821a_fw.bin \
 	device/hardkernel/common/wifi/wifi_id_list.txt:vendor/etc/wifi_id_list.txt \
 	device/hardkernel/common/wifi/8192cu:vendor/etc/modprobe.d/8192cu \
 	device/hardkernel/common/wifi/8812au:vendor/etc/modprobe.d/8812au \
