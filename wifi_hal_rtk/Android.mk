@@ -45,7 +45,7 @@ LOCAL_SRC_FILES := \
 	rtw_wifi_logger.cpp \
 	rtw_wifi_offload.cpp
 
-LOCAL_MODULE := libwifi-hal-rtl
+LOCAL_MODULE := libwifi-hal-rtk
 LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_STATIC_LIBRARY)

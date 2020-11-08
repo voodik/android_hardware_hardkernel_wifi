@@ -26,8 +26,8 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_nl80211
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_nl80211
 
-BOARD_WLAN_DEVICE := rtl
-LIB_WIFI_HAL := libwifi-hal-rtl
+BOARD_WLAN_DEVICE := realtek
+LIB_WIFI_HAL := libwifi-hal-rtk
 
 WIFI_FIRMWARE_LOADER      := ""
 WIFI_DRIVER_FW_PATH_PARAM := ""
