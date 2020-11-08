@@ -41,9 +41,9 @@ endif
 BT += android.hardware.bluetooth@1.0-impl
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BCM), true)
-BT += android.hardware.bluetooth@1.0-service
+BT += android.hardware.bluetooth@1.1-service
 else
-BT += android.hardware.bluetooth@1.0-service.btlinux
+BT += android.hardware.bluetooth@1.1-service.btlinux
 endif
 
 # Bluetooth configs
