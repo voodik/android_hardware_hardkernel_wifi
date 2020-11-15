@@ -71,7 +71,9 @@ endif
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    device/hardkernel/common/bluetooth/local_bt_address.txt:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/local_bt_address.txt
+    device/hardkernel/common/bluetooth/local_bt_address.txt:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/local_bt_address.txt \
+    device/hardkernel/common/bluetooth/rtl8821c_fw.bin:root/lib/firmware/rtl_bt/rtl8821c_fw.bin \
+    device/hardkernel/common/bluetooth/rtl8821c_config.bin:root/lib/firmware/rtl_bt/rtl8821c_config.bin
 
 PRODUCT_PACKAGES += $(BT)
 
